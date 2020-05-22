@@ -25,17 +25,17 @@ VDK软件包为用户提供了多种与VMAF算法实现进行交互的方式。�
 There are a number of ways one can use the package:
 
   - [VMAF Python library](resource/doc/VMAF_Python_library.md) offers full functionalities including running basic VMAF command line, running VMAF on a batch of video files, training and testing a VMAF model on video datasets, and visualization tools, etc.
-  - VMAF Python库提供了全部功能，包括运行基本的VMAF命令行，在一批视频文件上运行VMAF，在视频数据集上训练和测试VMAF模型以及可视化工具等。
+    VMAF Python库提供了全部功能，包括运行基本的VMAF命令行，在一批视频文件上运行VMAF，在视频数据集上训练和测试VMAF模型以及可视化工具等。
   - [`vmafossexec` - a C++ executable](resource/doc/vmafossexec.md) offers running the prediction part of the algorithm in full, such that one can easily deploy VMAF in a production environment without needing to configure the Python dependencies. Additionally, `vmafossexec` offers a number of exclusive features, such as 1) speed optimization using multi-threading and skipping frames, 2) optionally computing PSNR, SSIM and MS-SSIM metrics in the output.
-  - vmafossexec-一种C ++可执行文件，提供了完整运行算法的预测部分的功能，因此无需配置Python依赖项就可以轻松地在生产环境中部署VMAF。此外，vmafossexec提供了许多独有功能，例如1）使用多线程和跳过帧进行速度优化，2）可选地计算输出中的PSNR，SSIM和MS-SSIM指标。
+    vmafossexec-一种C ++可执行文件，提供了完整运行算法的预测部分的功能，因此无需配置Python依赖项就可以轻松地在生产环境中部署VMAF。此外，vmafossexec提供了许多独有功能，例如1）使用多线程和跳过帧进行速度优化，2）可选地计算输出中的PSNR，SSIM和MS-SSIM指标。
   - [`libvmaf` - a C library](libvmaf/README.md) offers an interface to incorporate VMAF into your C/C++ code.
-  - libvmaf-C库提供了将VMAF合并到您的C / C ++代码中的接口。
+    libvmaf-C库提供了将VMAF合并到您的C / C ++代码中的接口。
   - VMAF is now included as a filter in [FFmpeg](http://ffmpeg.org/) and can be configured using: `./configure --enable-libvmaf --enable-version3`. See the [FFmpeg documentation](https://ffmpeg.org/ffmpeg-filters.html#libvmaf) for usage.
-  - VMAF现在作为FFmpeg的筛选器包括在内，可以使用以下命令进行配置：./configure --enable-libvmaf --enable-version3。有关用法，请参见FFmpeg文档。
+    VMAF现在作为FFmpeg的筛选器包括在内，可以使用以下命令进行配置：./configure --enable-libvmaf --enable-version3。有关用法，请参见FFmpeg文档。
   - [VMAF Dockerfile](Dockerfile) generates a VMAF docker image from the [VMAF Python library](resource/doc/VMAF_Python_library.md). Refer to [this](resource/doc/docker.md) document for detailed usages.
-  - VMAF Dockerfile从VMAF Python库生成VMAF docker映像。有关详细用法，请参阅此文档。
+    VMAF Dockerfile从VMAF Python库生成VMAF docker映像。有关详细用法，请参阅此文档。
   - Build VMAF on Windows: follow instructions on [this](resource/doc/BuildForWindows.md) page.
-  - 在Windows上构建VMAF：按照此页面上的说明进行操作。
+    在Windows上构建VMAF：按照此页面上的说明进行操作。
 
 ## Datasets
 
