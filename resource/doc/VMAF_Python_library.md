@@ -61,7 +61,8 @@ and expect all tests pass.
 
 ## Basic Usage
 
-One can run VMAF either in single mode by `run_vmaf` or in batch mode by `run_vmaf_in_batch`. Besides, `ffmpeg2vmaf` is a command line tool that offers the capability of taking compressed video bitstreams as input.
+One can run VMAF either in single mode by `run_vmaf` or in batch mode by `run_vmaf_in_batch`. Besides, `ffmpeg2vmaf` is a command line tool that offers the capability of taking compressed video bitstreams as input. 
+可以通过run_vmaf以单模式运行VMAF，也可以通过run_vmaf_in_batch以批处理模式运行VMAF。此外，ffmpeg2vmaf是一个命令行工具，提供了将压缩视频比特流作为输入的功能。
 
 ### `run_vmaf` -- Running VMAF in Single Mode
 
