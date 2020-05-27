@@ -146,16 +146,19 @@ run_vmaf_in_batch resource/example/example_batch_input --parallelize
 
 ### Using `ffmpeg2vmaf`
 
-There is also an `ffmpeg2vmaf` command line tool which can compare any file format decodable by `ffmpeg`. `ffmpeg2vmaf` essentially pipes FFmpeg-decoded videos to VMAF. Note that you need a recent version of `ffmpeg` installed (for the first time, run the command line, follow the prompted instruction to specify the path of `ffmpeg`). 
+There is also an `ffmpeg2vmaf` command line tool which can compare any file format decodable by `ffmpeg`. `ffmpeg2vmaf` essentially pipes FFmpeg-decoded videos to VMAF. Note that you need a recent version of `ffmpeg` installed (for the first time, run the command line, follow the prompted instruction to specify the path of `ffmpeg`).   
+还有一个ffmpeg2vmaf命令行工具，可以比较ffmpeg可解码的任何文件格式。 ffmpeg2vmaf本质上将FFmpeg解码的视频通过管道传输到VMAF。请注意，您需要安装最新版本的ffmpeg（首次运行命令行，按照提示进行操作以指定ffmpeg的路径）。
 
 ```
 ffmpeg2vmaf quality_width quality_height reference_path distorted_path \
   [--model model_path] [--out-fmt out_fmt]
 ```
 
-Here `quality_width` and `quality_height` are the width and height the reference and distorted videos are scaled to before VMAF calculation. This is different from `run_vmaf`'s  `width` and `height`, which specify the raw YUV's width and height instead. The input to `ffmpeg2vmaf` must already have such information specified in the header so that they are FFmpeg-decodable.
+Here `quality_width` and `quality_height` are the width and height the reference and distorted videos are scaled to before VMAF calculation. This is different from `run_vmaf`'s  `width` and `height`, which specify the raw YUV's width and height instead. The input to `ffmpeg2vmaf` must already have such information specified in the header so that they are FFmpeg-decodable.  
+这里，quality_width和quality_height是参考值和失真视频在VMAF计算之前缩放到的宽度和高度。这与run_vmaf的width和height不同，它们分别指定原始YUV的宽度和高度。 ffmpeg2vmaf的输入必须已经在标头中指定了此类信息，以便FFmpeg可解码。
 
-Note that with `libvmaf` as a filter in FFmpeg becoming available (see [this](https://ffmpeg.org/ffmpeg-filters.html#libvmaf) section for details), `ffmpeg2vmaf` is no longer the preferred way to pass in compressed video streams to VMAF. 
+Note that with `libvmaf` as a filter in FFmpeg becoming available (see [this](https://ffmpeg.org/ffmpeg-filters.html#libvmaf) section for details), `ffmpeg2vmaf` is no longer the preferred way to pass in compressed video streams to VMAF.   
+请注意，随着`libvmaf`作为FFmpeg中的过滤器可用（有关详细信息，请参见[this]（https://ffmpeg.org/ffmpeg-filters.html#libvmaf）部分），`ffmpeg2vmaf`不再是首选的方法将压缩的视频流传递给VMAF。
 
 ## Advanced Usage
 
