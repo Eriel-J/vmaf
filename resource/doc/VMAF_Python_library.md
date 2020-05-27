@@ -158,7 +158,7 @@ Here `quality_width` and `quality_height` are the width and height the reference
 这里，quality_width和quality_height是参考值和失真视频在VMAF计算之前缩放到的宽度和高度。这与run_vmaf的width和height不同，它们分别指定原始YUV的宽度和高度。 ffmpeg2vmaf的输入必须已经在标头中指定了此类信息，以便FFmpeg可解码。
 
 Note that with `libvmaf` as a filter in FFmpeg becoming available (see [this](https://ffmpeg.org/ffmpeg-filters.html#libvmaf) section for details), `ffmpeg2vmaf` is no longer the preferred way to pass in compressed video streams to VMAF.   
-请注意，随着`libvmaf`作为FFmpeg中的过滤器可用（有关详细信息，请参见[this]（https://ffmpeg.org/ffmpeg-filters.html#libvmaf）部分），`ffmpeg2vmaf`不再是首选的方法将压缩的视频流传递给VMAF。
+请注意，随着`libvmaf`作为FFmpeg中的过滤器可用（有关详细信息，请参见[this]部分），`ffmpeg2vmaf`不再是首选的方法将压缩的视频流传递给VMAF。
 
 ## Advanced Usage
 
