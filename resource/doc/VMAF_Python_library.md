@@ -162,9 +162,11 @@ Note that with `libvmaf` as a filter in FFmpeg becoming available (see [this](ht
 
 ## Advanced Usage
 
-VMAF follows a machine-learning based approach to first extract a number of quality-relevant features (or elementary metrics) from a distorted video and its reference full-quality video, followed by fusing them into a final quality score using a non-linear regressor (e.g. an SVM regressor), hence the name “Video Multi-method Assessment Fusion”.
+VMAF follows a machine-learning based approach to first extract a number of quality-relevant features (or elementary metrics) from a distorted video and its reference full-quality video, followed by fusing them into a final quality score using a non-linear regressor (e.g. an SVM regressor), hence the name “Video Multi-method Assessment Fusion”.  
+VMAF遵循基于机器学习的方法，首先从失真的视频及其参考全画质视频中提取许多与质量相关的特征（或基本指标），然后使用非线性回归将它们融合为最终质量得分（例如SVM回归器），因此名称为“视频多方法评估融合”。
 
-In addition to the basic commands, the VMAF package also provides a framework to allow any user to train his/her own perceptual quality assessment model. For example, directory [`model`](../../model) contains a number of pre-trained models, which can be loaded by the aforementioned commands:
+In addition to the basic commands, the VMAF package also provides a framework to allow any user to train his/her own perceptual quality assessment model. For example, directory [`model`](../../model) contains a number of pre-trained models, which can be loaded by the aforementioned commands:  
+除了基本命令外，VMAF软件包还提供了一个框架，允许任何用户训练自己的感知质量评估模型。例如，目录[`model`]（../../ model）包含许多预先训练的模型，可以通过以下命令加载这些模型：
 
 ```
 run_vmaf format width height reference_path distorted_path [--model model_path]
@@ -189,11 +191,22 @@ A user can customize the model based on:
 - The list of features used
 - The regressor used (and its hyper-parameters)
 
-Once a model is trained, the VMAF package also provides tools to cross validate it on a different dataset and visualization.
+Once a model is trained, the VMAF package also provides tools to cross validate it on a different dataset and visualization.  
+
+用户可以根据以下内容自定义模型：
+
+-对其进行训练的视频数据集
+
+-使用的功能列表
+
+-使用的回归变量（及其超参数）
+
+训练完模型后，VMAF软件包还提供了在不同的数据集和可视化文件上交叉验证模型的工具。
 
 ### Create a Dataset
 
-To begin with, create a dataset file following the format in [`example_dataset.py`](../../resource/example/example_dataset.py). A dataset is a collection of distorted videos. Each has a unique asset ID and a corresponding reference video, identified by a unique content ID. Each distorted video is also associated with subjective quality score, typically a MOS (mean opinion score), obtained through subjective study. An example code snippet that defines a dataset is as follows:
+To begin with, create a dataset file following the format in [`example_dataset.py`](../../resource/example/example_dataset.py). A dataset is a collection of distorted videos. Each has a unique asset ID and a corresponding reference video, identified by a unique content ID. Each distorted video is also associated with subjective quality score, typically a MOS (mean opinion score), obtained through subjective study. An example code snippet that defines a dataset is as follows: 
+首先，按照[`example_dataset.py`]（../../ resource / example / example_dataset.py）中的格式创建数据集文件。数据集是失真视频的集合。每个都有唯一的资产ID和相应的参考视频，由唯一的内容ID标识。每个失真的视频还与通过主观研究获得的主观质量得分相关联，通常是MOS（平均意见得分）。定义数据集的示例代码片段如下：
 
 ```
 dataset_name = 'example'
